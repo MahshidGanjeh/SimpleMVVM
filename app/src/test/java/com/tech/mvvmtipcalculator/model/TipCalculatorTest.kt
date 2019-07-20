@@ -4,7 +4,7 @@ import junit.framework.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 
-class RestaurantCalculatorTest {
+class TipCalculatorTest {
 
     lateinit var calculator: TipCalculator
 
@@ -16,7 +16,7 @@ class RestaurantCalculatorTest {
     @Test
     fun testCalculateTip() {
 
-        var checkInput: Double = 10.0
+        var checkInput = 10.0
         var tipPct = 25
 
         var expectedTipResult = Tip(

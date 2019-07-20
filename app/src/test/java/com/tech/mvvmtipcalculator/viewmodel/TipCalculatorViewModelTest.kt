@@ -1,11 +1,12 @@
 package com.tech.mvvmtipcalculator.viewmodel
 
+import com.tech.mvvmtipcalculator.model.Tip
 import com.tech.mvvmtipcalculator.model.TipCalculator
-import com.tech.mvvmtipcalculator.viewModel.TipCalculatorViewModel
 import junit.framework.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock
+import org.mockito.Mockito.`when`
 import org.mockito.MockitoAnnotations
 
 class TipCalculatorViewModelTest {
@@ -24,23 +25,30 @@ class TipCalculatorViewModelTest {
     fun setUp() {
         MockitoAnnotations.initMocks(this)
 
-        tipCalculatorViewModel = TipCalculatorViewModel()
-        tipCalculatorViewModel.inputCheckAmount = "10.00"
-        tipCalculatorViewModel.inputTipPercentage = "25"
+        tipCalculatorViewModel = TipCalculatorViewModel(mockCalculator)
+
     }
 
     @Test
     fun testCalculateTip() {
 
+        tipCalculatorViewModel.inputCheckAmount = "10.00"
+        tipCalculatorViewModel.inputTipPercentage = "25"
 
+
+        val stub = Tip(checkAmount = 10.00, tipAmount = 2.5, total = 12.5)
+
+        `when`(mockCalculator.calculateTip(10.00, 25)).thenReturn(stub)
 
         tipCalculatorViewModel.calculate()
 
-       // assertEquals()
-        assertEquals(10.00, tipCalculatorViewModel.tip.checkAmount)
+        assertEquals(stub, tipCalculatorViewModel.tip)
+
+        // assertEquals()
+       /* assertEquals(10.00, tipCalculatorViewModel.tip.checkAmount)
         assertEquals(25, tipCalculatorViewModel.tip.tipPercentage)
         assertEquals(2.5, tipCalculatorViewModel.tip.tipAmount)
-        assertEquals(12.5, tipCalculatorViewModel.tip.total)
+        assertEquals(12.5, tipCalculatorViewModel.tip.total)*/
 
     }
 }

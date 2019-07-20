@@ -1,13 +1,13 @@
-package com.tech.mvvmtipcalculator.viewModel
+package com.tech.mvvmtipcalculator.viewmodel
 
 import com.tech.mvvmtipcalculator.model.Tip
 import com.tech.mvvmtipcalculator.model.TipCalculator
 
-class CalculatorViewModel(val calculator: TipCalculator = TipCalculator()) {
+class TipCalculatorViewModel(val tipCalculator: TipCalculator = TipCalculator()) {
 
-    var inputCheckAmount = ""
+    lateinit var inputCheckAmount: String
 
-    var inputTipPercentage = ""
+    lateinit var inputTipPercentage: String
 
     var tip = Tip()
 
@@ -17,7 +17,7 @@ class CalculatorViewModel(val calculator: TipCalculator = TipCalculator()) {
         var percentage = inputTipPercentage.toIntOrNull()
 
         if (check != null && percentage != null) {
-            calculator.calculateTip(check, percentage)
+            tip = tipCalculator.calculateTip(check, percentage)
         }
     }
 }
