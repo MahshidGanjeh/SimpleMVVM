@@ -1,4 +1,4 @@
-package com.tech.simplemvvmtipcalculator.model
+package com.tech.mvvmtipcalculator.model
 
 data class Tip(
     val checkAmount: Double = 0.0,

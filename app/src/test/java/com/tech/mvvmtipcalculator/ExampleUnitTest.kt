@@ -1,4 +1,4 @@
-package com.tech.simplemvvmtipcalculator
+package com.tech.mvvmtipcalculator
 
 import org.junit.Test
 

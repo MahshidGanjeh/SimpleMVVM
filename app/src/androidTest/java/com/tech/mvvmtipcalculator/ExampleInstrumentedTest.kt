@@ -1,4 +1,4 @@
-package com.tech.simplemvvmtipcalculator
+package com.tech.mvvmtipcalculator
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

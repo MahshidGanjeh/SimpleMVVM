@@ -1,4 +1,4 @@
-package com.tech.simplemvvmtipcalculator.model
+package com.tech.mvvmtipcalculator.model
 
 import junit.framework.Assert.assertEquals
 import org.junit.Before

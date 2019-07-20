@@ -1,7 +1,7 @@
-package com.tech.simplemvvmtipcalculator.viewModel
+package com.tech.mvvmtipcalculator.viewModel
 
-import com.tech.simplemvvmtipcalculator.model.Tip
-import com.tech.simplemvvmtipcalculator.model.TipCalculator
+import com.tech.mvvmtipcalculator.model.Tip
+import com.tech.mvvmtipcalculator.model.TipCalculator
 
 class CalculatorViewModel(val calculator: TipCalculator = TipCalculator()) {
 

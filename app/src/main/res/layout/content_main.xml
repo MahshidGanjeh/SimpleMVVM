@@ -30,7 +30,7 @@
                     android:id="@+id/input_check_amount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/enter_check_amount"
+                    android:hint="enter check amount"
                     android:inputType="numberDecimal"
                     android:imeOptions="actionNext"
                     android:maxLines="1"
@@ -52,7 +52,7 @@
                     android:id="@+id/input_tip_percentage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/tip_percentage_label"
+                    android:hint="tip percentage"
                     android:inputType="number"
                     android:maxLines="1"
                     android:selectAllOnFocus="true"
@@ -93,7 +93,7 @@
                         android:id="@+id/bill_amount_label"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/check_amount_output_label"
+                        android:text="check amount"
                         tools:text="Check"
                         android:textAlignment="center"/>
 
@@ -121,7 +121,7 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         tools:text="Tip"
-                        android:text="@string/tip_output_label"/>
+                        android:text="tip output"/>
 
 
             </LinearLayout>
@@ -145,7 +145,7 @@
                         android:id="@+id/total_dollar_amount_label"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/total_output_label"
+                        android:text="total output"
                         tools:text="Total"
                         android:textAlignment="center"/>
 
