@@ -86,15 +86,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
+                        android:text="@{childVm.outputCheckAmount}"
                         tools:text="$20.00"
-                        />
+                />
 
                 <TextView
                         android:id="@+id/bill_amount_label"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="check amount"
-                        tools:text="Check"
+                        android:text="check Amount"
                         android:textAlignment="center"/>
 
             </LinearLayout>
@@ -112,6 +112,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
+                        android:text="@{childVm.outputTipAmount}"
                         tools:text="$11.50"/>
 
                 <TextView
@@ -119,8 +120,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        tools:text="Tip"
-                        android:text="tip output"/>
+                        android:text="Tip Amount"/>
 
 
             </LinearLayout>
@@ -137,14 +137,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
+                        android:text="@{childVm.outputTotalDollarAmount}"
                         tools:text="$31.50"/>
 
                 <TextView
                         android:id="@+id/total_dollar_amount_label"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="total output"
-                        tools:text="Total"
+                        android:text="Total Amount"
                         android:textAlignment="center"/>
 
             </LinearLayout>
@@ -162,7 +162,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/calculation_outputs"
                 android:textAlignment="center"
-
                 tools:text="Veggie Palace"/>
 
     </android.support.constraint.ConstraintLayout>

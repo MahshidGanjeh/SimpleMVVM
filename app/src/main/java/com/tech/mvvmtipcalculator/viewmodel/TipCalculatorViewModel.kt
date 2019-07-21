@@ -10,6 +10,12 @@ class TipCalculatorViewModel(val tipCalculator: TipCalculator = TipCalculator())
 
     var inputTipPercentage = ""
 
+    var outputCheckAmount = ""
+
+    var outputTipAmount = ""
+
+    var outputTotalDollarAmount = ""
+
     var tip = Tip()
 
     fun calculate() {
@@ -21,7 +27,9 @@ class TipCalculatorViewModel(val tipCalculator: TipCalculator = TipCalculator())
             tip = tipCalculator.calculateTip(check, percentage)
         }
 
-        inputCheckAmount = "00"
+        outputCheckAmount = "$" + tip.checkAmount.toString()
+        outputTipAmount = "$" + tip.tipAmount.toString()
+        outputTotalDollarAmount = "$" + tip.total.toString()
         notifyChange()
     }
 }

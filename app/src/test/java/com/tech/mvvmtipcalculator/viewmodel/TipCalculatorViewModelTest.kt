@@ -42,9 +42,11 @@ class TipCalculatorViewModelTest {
 
         tipCalculatorViewModel.calculate()
 
-        assertEquals(stub, tipCalculatorViewModel.tip)
+        //assertEquals(stub, tipCalculatorViewModel.tip)
 
-        // assertEquals()
+        assertEquals("$10.0",tipCalculatorViewModel.outputCheckAmount)
+        assertEquals("$2.5",tipCalculatorViewModel.outputTipAmount)
+        assertEquals("$12.5" , tipCalculatorViewModel.outputTotalDollarAmount)
        /* assertEquals(10.00, tipCalculatorViewModel.tip.checkAmount)
         assertEquals(25, tipCalculatorViewModel.tip.tipPercentage)
         assertEquals(2.5, tipCalculatorViewModel.tip.tipAmount)
