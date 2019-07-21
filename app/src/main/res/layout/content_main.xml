@@ -5,8 +5,8 @@
 
     <data>
         <variable
-                name="vm"
-                type="com.acme.tipcalculator.viewmodel.CalculatorViewModel"/>
+                name="childVm"
+                type="com.tech.mvvmtipcalculator.viewmodel.TipCalculatorViewModel"/>
     </data>
 
     <android.support.constraint.ConstraintLayout
@@ -35,7 +35,7 @@
                     android:imeOptions="actionNext"
                     android:maxLines="1"
                     android:selectAllOnFocus="true"
-                    android:text="@={vm.inputCheckAmount}"/>
+                    android:text="@={childVm.inputCheckAmount}"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -57,7 +57,7 @@
                     android:maxLines="1"
                     android:selectAllOnFocus="true"
                     android:imeOptions="actionDone"
-                    android:text="@={vm.inputTipPercentage}"/>
+                    android:text="@={childVm.inputTipPercentage}"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -87,7 +87,7 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         tools:text="$20.00"
-                        android:text="@{vm.outputCheckAmount}"/>
+                        />
 
                 <TextView
                         android:id="@+id/bill_amount_label"
@@ -112,8 +112,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        tools:text="$11.50"
-                        android:text="@{vm.outputTipAmount}"/>
+                        tools:text="$11.50"/>
 
                 <TextView
                         android:id="@+id/tip_dollar_amount_label"
@@ -138,8 +137,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        tools:text="$31.50"
-                        android:text="@{vm.outputTotalDollarAmount}"/>
+                        tools:text="$31.50"/>
 
                 <TextView
                         android:id="@+id/total_dollar_amount_label"
@@ -164,7 +162,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/calculation_outputs"
                 android:textAlignment="center"
-                android:text="@{vm.locationName}"
+
                 tools:text="Veggie Palace"/>
 
     </android.support.constraint.ConstraintLayout>
